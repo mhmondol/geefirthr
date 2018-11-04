@@ -31,7 +31,7 @@
 #' geefirth(y ~ x + obstime, id=near_to_sep$id, data=near_to_sep, corstr = "exchangeable");
 #'
 #' @export
-#'
+
 
 geefirth <- function(formula = formula(data), id = id, data = parent.frame(), corstr="independence"){
   call <- match.call()
