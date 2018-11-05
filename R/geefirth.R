@@ -301,7 +301,7 @@ geefirth <- function(formula = formula(data), id = id, data = parent.frame(), co
   dimen <- sapply(R, function(x) dim(x)[2])
   ##########################################
   t.swM=round(beta/VsMod, 4)
-  p.value=round(pt(t.swM, N-pp, lower.tail = F), 4)
+  p.value=round(pf(t.swM^2, 1, N-pp, lower.tail = F), 4)
   est.swM <- data.frame(coefficients=beta, std.err=VsMod, Wald=(t.swM)^2, p.val=p.value)
   row.names(est.swM) <- xnames
 
