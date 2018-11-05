@@ -4,13 +4,15 @@
 \alias{geefirth}
 \title{Fitting Firth-type GEE for  correlated binary data with separation or near-to-separation}
 \usage{
-geefirth(formula = formula(data), id = id, data = parent.frame(),
+geefirth(formula, id = id, data = parent.env(),
   corstr = "independence")
 }
 \arguments{
 \item{formula}{Similar as geeglm}
 
 \item{id}{cluster variable and requirs to be sorted}
+
+\item{data}{data frame that contains the variables mentioned in id and formula}
 
 \item{corstr}{working correlation structure, "independence" (default), "ar1", "unstr", "exchangeable".}
 }
@@ -21,16 +23,19 @@ it provides bias-correctedsandwich estimate of the standard error of the penaliz
 }
 \examples{
 
-# loading data
-data(geefirth_data)
+data(quasiDat)
 
 # Fitting GEE for quasi-separated data
 
-geefirth(y ~ x + obstime, id=quasi_sep$id, data=quasi_sep, corstr = "exchangeable");
+ geefirth(y ~ x + obstime, id=id,
+       data=quasiDat, corstr = "exchangeable");
+
+data(nearDat)
 
 # Fitting GEE for near to quasi-separated data
 
-geefirth(y ~ x + obstime, id=near_to_sep$id, data=near_to_sep, corstr = "exchangeable");
+ geefirth(y ~ x + obstime, id=id,
+          data=nearDat, corstr = "exchangeable");
 
 }
 \author{
