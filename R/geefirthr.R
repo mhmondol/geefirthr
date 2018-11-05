@@ -8,5 +8,5 @@
 #'
 #' @author Momenul Haque Mondol \email{mmondol@isrt.ac.bd}
 #'
-#' @name geefirthm
+#' @name geefirthr
 NULL
