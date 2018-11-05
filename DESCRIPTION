@@ -1,14 +1,19 @@
-Package: geefirthm
-Type: Package
-Title: Fitting Firth-type GEE for  correlated binary data with separation or near-to-separation
+Package: geefirthr
+Title: Fitting Firth-type GEE for correlated binary data with
+        separation or near-to-separation
 Version: 0.1.0
-Author: Momenul Haque Mondol, M. Shafiqur Rahman 
-Maintainer: Momenul Haque Mondol <mmondol@isrt.ac.bd>
-Description: geefirth fits GEE with Firth-type penalization to provide
- bias-corrected finite  estimate of the regression coefficient  in case of separation or near-to-separation. In addition,
- it provides bias-correctedsandwich estimate of the standard error of the penalized GEE estimate.
+Authors@R: as.person(c(
+            "Momenul Mondol <mmondl@isrt.ac.bd> [aut, cre]",
+                  "Rahman Shafiq <shafiq@isrt.ac.bd> [aut]"
+                  ))
+Description: geefirth provides finite and less biased estimate than gee in case of separation or near to separation.
 License: GPL-2
-Encoding: UTF-8
+Imports: MASS
 LazyData: true
-Imports: corpcor
+Encoding: UTF-8
 RoxygenNote: 6.1.0
+NeedsCompilation: no
+Packaged: 2018-11-05 11:22:24 UTC; mlatif
+Author: Momenul Mondol [aut, cre],
+  Rahman Shafiq [aut]
+Maintainer: Momenul Mondol <mmondl@isrt.ac.bd>
